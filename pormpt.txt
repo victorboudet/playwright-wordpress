@@ -1,0 +1,39 @@
+I'm working on an AI project, here the informations about it:
+
+It is a project that aims to develop an AI based on models like GPT or it can be others type of models than llm if you think it is better.
+
+On wordpress there are blocks, for example all the core blocks, here for example a paragraph block
+```html
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"twentytwentyfive/format"}}},"fontSize":"small"} -->
+<p class="has-small-font-size"></p>
+<!-- /wp:paragraph -->
+```
+
+With a theses blocks, we can build full functionnal pages, theses assembly of blocks are named "patterns".
+Patterns are a way to organize and reuse blocks in a consistent way.
+I got 1200 patterns that each are made of differents blocks.
+The goal is to create an AI that can generate patterns that fit together and create new patterns that are unique and creative.
+I want that AI based on block, to develop full wordpress webpages.
+
+Here is the context of the project, tell me all the additional context you need to know to help me develop this AI.
+I have no idea where to begin
+So how can i create an AI that can generate wordpress pages, with theses wordpress blocks, i can provide the full core/block references, and all the pattern to maybe train the AI
+
+# me
+I got some background with CPP, C, Python, Rust and JavaScript.
+I am mostly working on a vps on the cloud
+I can get some budget for this project, but probably no more than 100$
+
+# Patterns Info
+I have 1200 patterns
+Each pattern got a name and a list of 1 to 12 tags
+I can get a rendered version of each pattern
+The patterns are stored in a database
+I got all type of patterns from commercial to blog and portfolio
+
+# AI
+The AI must generate full pages
+it must ensure that blocks are compatible with each other
+it must ensure that the generated pages are valid and functional
+it must ensure that the generated pages are optimized for SEO
+it would be given a theme

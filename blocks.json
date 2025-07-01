@@ -1,0 +1,5553 @@
+[
+  {
+    "name": "archives",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/archives",
+      "title": "Archives",
+      "category": "widgets",
+      "description": "Display a date archive of your posts.",
+      "textdomain": "default",
+      "attributes": {
+        "displayAsDropdown": {
+          "type": "boolean",
+          "default": false
+        },
+        "showLabel": {
+          "type": "boolean",
+          "default": true
+        },
+        "showPostCounts": {
+          "type": "boolean",
+          "default": false
+        },
+        "type": {
+          "type": "string",
+          "default": "monthly"
+        }
+      },
+      "supports": {
+        "align": true,
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        },
+        "html": false,
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-archives-editor"
+    }
+  },
+  {
+    "name": "audio",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/audio",
+      "title": "Audio",
+      "category": "media",
+      "description": "Embed a simple audio player.",
+      "keywords": [
+        "music",
+        "sound",
+        "podcast",
+        "recording"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "blob": {
+          "type": "string",
+          "role": "local"
+        },
+        "src": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "audio",
+          "attribute": "src",
+          "role": "content"
+        },
+        "caption": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "figcaption",
+          "role": "content"
+        },
+        "id": {
+          "type": "number",
+          "role": "content"
+        },
+        "autoplay": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "audio",
+          "attribute": "autoplay"
+        },
+        "loop": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "audio",
+          "attribute": "loop"
+        },
+        "preload": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "audio",
+          "attribute": "preload"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": true,
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-audio-editor",
+      "style": "wp-block-audio"
+    }
+  },
+  {
+    "name": "avatar",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/avatar",
+      "title": "Avatar",
+      "category": "theme",
+      "description": "Add a user\u2019s avatar.",
+      "textdomain": "default",
+      "attributes": {
+        "userId": {
+          "type": "number"
+        },
+        "size": {
+          "type": "number",
+          "default": 96
+        },
+        "isLink": {
+          "type": "boolean",
+          "default": false
+        },
+        "linkTarget": {
+          "type": "string",
+          "default": "_self"
+        }
+      },
+      "usesContext": [
+        "postType",
+        "postId",
+        "commentId"
+      ],
+      "supports": {
+        "html": false,
+        "align": true,
+        "alignWide": false,
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "__experimentalBorder": {
+          "__experimentalSkipSerialization": true,
+          "radius": true,
+          "width": true,
+          "color": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true
+          }
+        },
+        "color": {
+          "text": false,
+          "background": false
+        },
+        "filter": {
+          "duotone": true
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "selectors": {
+        "border": ".wp-block-avatar img",
+        "filter": {
+          "duotone": ".wp-block-avatar img"
+        }
+      },
+      "editorStyle": "wp-block-avatar-editor",
+      "style": "wp-block-avatar"
+    }
+  },
+  {
+    "name": "pattern",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/pattern",
+      "title": "Pattern Placeholder",
+      "category": "theme",
+      "description": "Show a block pattern.",
+      "supports": {
+        "html": false,
+        "inserter": false,
+        "renaming": false,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "textdomain": "default",
+      "attributes": {
+        "slug": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
+    "name": "button",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/button",
+      "title": "Button",
+      "category": "design",
+      "parent": [
+        "core/buttons"
+      ],
+      "description": "Prompt visitors to take action with a button-style link.",
+      "keywords": [
+        "link"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "tagName": {
+          "type": "string",
+          "enum": [
+            "a",
+            "button"
+          ],
+          "default": "a"
+        },
+        "type": {
+          "type": "string",
+          "default": "button"
+        },
+        "textAlign": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a",
+          "attribute": "href",
+          "role": "content"
+        },
+        "title": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a,button",
+          "attribute": "title",
+          "role": "content"
+        },
+        "text": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "a,button",
+          "role": "content"
+        },
+        "linkTarget": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a",
+          "attribute": "target",
+          "role": "content"
+        },
+        "rel": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a",
+          "attribute": "rel",
+          "role": "content"
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "textColor": {
+          "type": "string"
+        },
+        "gradient": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "splitting": true,
+        "align": false,
+        "alignWide": false,
+        "color": {
+          "__experimentalSkipSerialization": true,
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "typography": {
+          "__experimentalSkipSerialization": [
+            "fontSize",
+            "lineHeight",
+            "fontFamily",
+            "fontWeight",
+            "fontStyle",
+            "textTransform",
+            "textDecoration",
+            "letterSpacing"
+          ],
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "reusable": false,
+        "shadow": {
+          "__experimentalSkipSerialization": true
+        },
+        "spacing": {
+          "__experimentalSkipSerialization": true,
+          "padding": [
+            "horizontal",
+            "vertical"
+          ],
+          "__experimentalDefaultControls": {
+            "padding": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalSkipSerialization": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "styles": [
+        {
+          "name": "fill",
+          "label": "Fill",
+          "isDefault": true
+        },
+        {
+          "name": "outline",
+          "label": "Outline"
+        }
+      ],
+      "editorStyle": "wp-block-button-editor",
+      "style": "wp-block-button",
+      "selectors": {
+        "root": ".wp-block-button .wp-block-button__link",
+        "typography": {
+          "writingMode": ".wp-block-button"
+        }
+      }
+    }
+  },
+  {
+    "name": "buttons",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/buttons",
+      "title": "Buttons",
+      "category": "design",
+      "allowedBlocks": [
+        "core/button"
+      ],
+      "description": "Prompt visitors to take action with a group of button-style links.",
+      "keywords": [
+        "link"
+      ],
+      "textdomain": "default",
+      "supports": {
+        "anchor": true,
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "__experimentalExposeControlsToChildren": true,
+        "color": {
+          "gradients": true,
+          "text": false,
+          "__experimentalDefaultControls": {
+            "background": true
+          }
+        },
+        "spacing": {
+          "blockGap": [
+            "horizontal",
+            "vertical"
+          ],
+          "padding": true,
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "__experimentalDefaultControls": {
+            "blockGap": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "layout": {
+          "allowSwitching": false,
+          "allowInheriting": false,
+          "default": {
+            "type": "flex"
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-buttons-editor",
+      "style": "wp-block-buttons"
+    }
+  },
+  {
+    "name": "calendar",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/calendar",
+      "title": "Calendar",
+      "category": "widgets",
+      "description": "A calendar of your site\u2019s posts.",
+      "keywords": [
+        "posts",
+        "archive"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "month": {
+          "type": "integer"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "supports": {
+        "align": true,
+        "html": false,
+        "color": {
+          "link": true,
+          "__experimentalSkipSerialization": [
+            "text",
+            "background"
+          ],
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          },
+          "__experimentalSelector": "table, th"
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-calendar"
+    }
+  },
+  {
+    "name": "code",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/code",
+      "title": "Code",
+      "category": "text",
+      "description": "Display code snippets that respect your spacing and tabs.",
+      "textdomain": "default",
+      "attributes": {
+        "content": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "code",
+          "__unstablePreserveWhiteSpace": true,
+          "role": "content"
+        }
+      },
+      "supports": {
+        "align": [
+          "wide"
+        ],
+        "anchor": true,
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "spacing": {
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "width": true,
+            "color": true
+          }
+        },
+        "color": {
+          "text": true,
+          "background": true,
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-code"
+    }
+  },
+  {
+    "name": "column",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/column",
+      "title": "Column",
+      "category": "design",
+      "parent": [
+        "core/columns"
+      ],
+      "description": "A single column within a columns block.",
+      "textdomain": "default",
+      "attributes": {
+        "verticalAlignment": {
+          "type": "string"
+        },
+        "width": {
+          "type": "string"
+        },
+        "allowedBlocks": {
+          "type": "array"
+        },
+        "templateLock": {
+          "type": [
+            "string",
+            "boolean"
+          ],
+          "enum": [
+            "all",
+            "insert",
+            "contentOnly",
+            false
+          ]
+        }
+      },
+      "supports": {
+        "__experimentalOnEnter": true,
+        "anchor": true,
+        "reusable": false,
+        "html": false,
+        "color": {
+          "gradients": true,
+          "heading": true,
+          "button": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "shadow": true,
+        "spacing": {
+          "blockGap": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "padding": true,
+            "blockGap": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "layout": true,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      }
+    }
+  },
+  {
+    "name": "columns",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/columns",
+      "title": "Columns",
+      "category": "design",
+      "allowedBlocks": [
+        "core/column"
+      ],
+      "description": "Display content in multiple columns, with blocks added to each column.",
+      "textdomain": "default",
+      "attributes": {
+        "verticalAlignment": {
+          "type": "string"
+        },
+        "isStackedOnMobile": {
+          "type": "boolean",
+          "default": true
+        },
+        "templateLock": {
+          "type": [
+            "string",
+            "boolean"
+          ],
+          "enum": [
+            "all",
+            "insert",
+            "contentOnly",
+            false
+          ]
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "heading": true,
+          "button": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "blockGap": {
+            "__experimentalDefault": "2em",
+            "sides": [
+              "horizontal",
+              "vertical"
+            ]
+          },
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "padding": true,
+            "blockGap": true
+          }
+        },
+        "layout": {
+          "allowSwitching": false,
+          "allowInheriting": false,
+          "allowEditing": false,
+          "default": {
+            "type": "flex",
+            "flexWrap": "nowrap"
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "shadow": true
+      },
+      "editorStyle": "wp-block-columns-editor",
+      "style": "wp-block-columns"
+    }
+  },
+  {
+    "name": "comment-author-name",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comment-author-name",
+      "title": "Comment Author Name",
+      "category": "theme",
+      "ancestor": [
+        "core/comment-template"
+      ],
+      "description": "Displays the name of the author of the comment.",
+      "textdomain": "default",
+      "attributes": {
+        "isLink": {
+          "type": "boolean",
+          "default": true
+        },
+        "linkTarget": {
+          "type": "string",
+          "default": "_self"
+        },
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "usesContext": [
+        "commentId"
+      ],
+      "supports": {
+        "html": false,
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-comment-author-name"
+    }
+  },
+  {
+    "name": "comment-content",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comment-content",
+      "title": "Comment Content",
+      "category": "theme",
+      "ancestor": [
+        "core/comment-template"
+      ],
+      "description": "Displays the contents of a comment.",
+      "textdomain": "default",
+      "usesContext": [
+        "commentId"
+      ],
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        },
+        "spacing": {
+          "padding": [
+            "horizontal",
+            "vertical"
+          ],
+          "__experimentalDefaultControls": {
+            "padding": true
+          }
+        },
+        "html": false
+      },
+      "style": "wp-block-comment-content"
+    }
+  },
+  {
+    "name": "comment-date",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comment-date",
+      "title": "Comment Date",
+      "category": "theme",
+      "ancestor": [
+        "core/comment-template"
+      ],
+      "description": "Displays the date on which the comment was posted.",
+      "textdomain": "default",
+      "attributes": {
+        "format": {
+          "type": "string"
+        },
+        "isLink": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "usesContext": [
+        "commentId"
+      ],
+      "supports": {
+        "html": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-comment-date"
+    }
+  },
+  {
+    "name": "comment-edit-link",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comment-edit-link",
+      "title": "Comment Edit Link",
+      "category": "theme",
+      "ancestor": [
+        "core/comment-template"
+      ],
+      "description": "Displays a link to edit the comment in the WordPress Dashboard. This link is only visible to users with the edit comment capability.",
+      "textdomain": "default",
+      "usesContext": [
+        "commentId"
+      ],
+      "attributes": {
+        "linkTarget": {
+          "type": "string",
+          "default": "_self"
+        },
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "html": false,
+        "color": {
+          "link": true,
+          "gradients": true,
+          "text": false,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        }
+      },
+      "style": "wp-block-comment-edit-link"
+    }
+  },
+  {
+    "name": "comment-reply-link",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comment-reply-link",
+      "title": "Comment Reply Link",
+      "category": "theme",
+      "ancestor": [
+        "core/comment-template"
+      ],
+      "description": "Displays a link to reply to a comment.",
+      "textdomain": "default",
+      "usesContext": [
+        "commentId"
+      ],
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "color": {
+          "gradients": true,
+          "link": true,
+          "text": false,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        },
+        "html": false
+      },
+      "style": "wp-block-comment-reply-link"
+    }
+  },
+  {
+    "name": "comment-template",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comment-template",
+      "title": "Comment Template",
+      "category": "design",
+      "parent": [
+        "core/comments"
+      ],
+      "description": "Contains the block elements used to display a comment, like the title, date, author, avatar and more.",
+      "textdomain": "default",
+      "usesContext": [
+        "postId"
+      ],
+      "supports": {
+        "align": true,
+        "html": false,
+        "reusable": false,
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-comment-template"
+    }
+  },
+  {
+    "name": "comments",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comments",
+      "title": "Comments",
+      "category": "theme",
+      "description": "An advanced block that allows displaying post comments using different visual configurations.",
+      "textdomain": "default",
+      "attributes": {
+        "tagName": {
+          "type": "string",
+          "default": "div"
+        },
+        "legacy": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "color": {
+          "gradients": true,
+          "heading": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "editorStyle": "wp-block-comments-editor",
+      "usesContext": [
+        "postId",
+        "postType"
+      ]
+    }
+  },
+  {
+    "name": "comments-pagination",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comments-pagination",
+      "title": "Comments Pagination",
+      "category": "theme",
+      "parent": [
+        "core/comments"
+      ],
+      "allowedBlocks": [
+        "core/comments-pagination-previous",
+        "core/comments-pagination-numbers",
+        "core/comments-pagination-next"
+      ],
+      "description": "Displays a paginated navigation to next/previous set of comments, when applicable.",
+      "textdomain": "default",
+      "attributes": {
+        "paginationArrow": {
+          "type": "string",
+          "default": "none"
+        }
+      },
+      "example": {
+        "attributes": {
+          "paginationArrow": "none"
+        }
+      },
+      "providesContext": {
+        "comments/paginationArrow": "paginationArrow"
+      },
+      "supports": {
+        "align": true,
+        "reusable": false,
+        "html": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "layout": {
+          "allowSwitching": false,
+          "allowInheriting": false,
+          "default": {
+            "type": "flex"
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-comments-pagination-editor",
+      "style": "wp-block-comments-pagination"
+    }
+  },
+  {
+    "name": "comments-title",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/comments-title",
+      "title": "Comments Title",
+      "category": "theme",
+      "ancestor": [
+        "core/comments"
+      ],
+      "description": "Displays a title with the number of comments.",
+      "textdomain": "default",
+      "usesContext": [
+        "postId",
+        "postType"
+      ],
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        },
+        "showPostTitle": {
+          "type": "boolean",
+          "default": true
+        },
+        "showCommentsCount": {
+          "type": "boolean",
+          "default": true
+        },
+        "level": {
+          "type": "number",
+          "default": 2
+        },
+        "levelOptions": {
+          "type": "array"
+        }
+      },
+      "supports": {
+        "anchor": false,
+        "align": true,
+        "html": false,
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        },
+        "color": {
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true,
+            "__experimentalFontFamily": true,
+            "__experimentalFontStyle": true,
+            "__experimentalFontWeight": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      }
+    }
+  },
+  {
+    "name": "cover",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/cover",
+      "title": "Cover",
+      "category": "media",
+      "description": "Add an image or video with a text overlay.",
+      "textdomain": "default",
+      "attributes": {
+        "url": {
+          "type": "string"
+        },
+        "useFeaturedImage": {
+          "type": "boolean",
+          "default": false
+        },
+        "id": {
+          "type": "number"
+        },
+        "alt": {
+          "type": "string",
+          "default": ""
+        },
+        "hasParallax": {
+          "type": "boolean",
+          "default": false
+        },
+        "isRepeated": {
+          "type": "boolean",
+          "default": false
+        },
+        "dimRatio": {
+          "type": "number",
+          "default": 100
+        },
+        "overlayColor": {
+          "type": "string"
+        },
+        "customOverlayColor": {
+          "type": "string"
+        },
+        "isUserOverlayColor": {
+          "type": "boolean"
+        },
+        "backgroundType": {
+          "type": "string",
+          "default": "image"
+        },
+        "focalPoint": {
+          "type": "object"
+        },
+        "minHeight": {
+          "type": "number"
+        },
+        "minHeightUnit": {
+          "type": "string"
+        },
+        "gradient": {
+          "type": "string"
+        },
+        "customGradient": {
+          "type": "string"
+        },
+        "contentPosition": {
+          "type": "string"
+        },
+        "isDark": {
+          "type": "boolean",
+          "default": true
+        },
+        "allowedBlocks": {
+          "type": "array"
+        },
+        "templateLock": {
+          "type": [
+            "string",
+            "boolean"
+          ],
+          "enum": [
+            "all",
+            "insert",
+            "contentOnly",
+            false
+          ]
+        },
+        "tagName": {
+          "type": "string",
+          "default": "div"
+        },
+        "sizeSlug": {
+          "type": "string"
+        }
+      },
+      "usesContext": [
+        "postId",
+        "postType"
+      ],
+      "supports": {
+        "anchor": true,
+        "align": true,
+        "html": false,
+        "shadow": true,
+        "spacing": {
+          "padding": true,
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "blockGap": true,
+          "__experimentalDefaultControls": {
+            "padding": true,
+            "blockGap": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "color": {
+          "heading": true,
+          "text": true,
+          "background": false,
+          "__experimentalSkipSerialization": [
+            "gradients"
+          ],
+          "enableContrastChecker": false
+        },
+        "dimensions": {
+          "aspectRatio": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "layout": {
+          "allowJustification": false
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "filter": {
+          "duotone": true
+        }
+      },
+      "selectors": {
+        "filter": {
+          "duotone": ".wp-block-cover > .wp-block-cover__image-background, .wp-block-cover > .wp-block-cover__video-background"
+        }
+      },
+      "editorStyle": "wp-block-cover-editor",
+      "style": "wp-block-cover"
+    }
+  },
+  {
+    "name": "details",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/details",
+      "title": "Details",
+      "category": "text",
+      "description": "Hide and show additional content.",
+      "keywords": [
+        "accordion",
+        "summary",
+        "toggle",
+        "disclosure"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "showContent": {
+          "type": "boolean",
+          "default": false
+        },
+        "summary": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "summary",
+          "role": "content"
+        },
+        "name": {
+          "type": "string",
+          "source": "attribute",
+          "attribute": "name",
+          "selector": ".wp-block-details"
+        },
+        "allowedBlocks": {
+          "type": "array"
+        },
+        "placeholder": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "__experimentalOnEnter": true,
+        "align": [
+          "wide",
+          "full"
+        ],
+        "anchor": true,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "width": true,
+          "style": true
+        },
+        "html": false,
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "blockGap": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "layout": {
+          "allowEditing": false
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-details-editor",
+      "style": "wp-block-details"
+    }
+  },
+  {
+    "name": "embed",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/embed",
+      "title": "Embed",
+      "category": "embed",
+      "description": "Add a block that displays content pulled from other sites, like Twitter or YouTube.",
+      "textdomain": "default",
+      "attributes": {
+        "url": {
+          "type": "string",
+          "role": "content"
+        },
+        "caption": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "figcaption",
+          "role": "content"
+        },
+        "type": {
+          "type": "string",
+          "role": "content"
+        },
+        "providerNameSlug": {
+          "type": "string",
+          "role": "content"
+        },
+        "allowResponsive": {
+          "type": "boolean",
+          "default": true
+        },
+        "responsive": {
+          "type": "boolean",
+          "default": false,
+          "role": "content"
+        },
+        "previewable": {
+          "type": "boolean",
+          "default": true,
+          "role": "content"
+        }
+      },
+      "supports": {
+        "align": true,
+        "spacing": {
+          "margin": true
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-embed-editor",
+      "style": "wp-block-embed"
+    }
+  },
+  {
+    "name": "file",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/file",
+      "title": "File",
+      "category": "media",
+      "description": "Add a link to a downloadable file.",
+      "keywords": [
+        "document",
+        "pdf",
+        "download"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "id": {
+          "type": "number"
+        },
+        "blob": {
+          "type": "string",
+          "role": "local"
+        },
+        "href": {
+          "type": "string",
+          "role": "content"
+        },
+        "fileId": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a:not([download])",
+          "attribute": "id"
+        },
+        "fileName": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "a:not([download])",
+          "role": "content"
+        },
+        "textLinkHref": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a:not([download])",
+          "attribute": "href",
+          "role": "content"
+        },
+        "textLinkTarget": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "a:not([download])",
+          "attribute": "target"
+        },
+        "showDownloadButton": {
+          "type": "boolean",
+          "default": true
+        },
+        "downloadButtonText": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "a[download]",
+          "role": "content"
+        },
+        "displayPreview": {
+          "type": "boolean"
+        },
+        "previewHeight": {
+          "type": "number",
+          "default": 600
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": true,
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "text": false,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "link": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        },
+        "interactivity": true
+      },
+      "editorStyle": "wp-block-file-editor",
+      "style": "wp-block-file"
+    }
+  },
+  {
+    "name": "footnotes",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/footnotes",
+      "title": "Footnotes",
+      "category": "text",
+      "description": "Display footnotes added to the page.",
+      "keywords": [
+        "references"
+      ],
+      "textdomain": "default",
+      "usesContext": [
+        "postId",
+        "postType"
+      ],
+      "supports": {
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": false,
+            "color": false,
+            "width": false,
+            "style": false
+          }
+        },
+        "color": {
+          "background": true,
+          "link": true,
+          "text": true,
+          "__experimentalDefaultControls": {
+            "link": true,
+            "text": true
+          }
+        },
+        "html": false,
+        "multiple": false,
+        "reusable": false,
+        "inserter": false,
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-footnotes"
+    }
+  },
+  {
+    "name": "form",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "__experimental": true,
+      "name": "core/form",
+      "title": "Form",
+      "category": "common",
+      "allowedBlocks": [
+        "core/paragraph",
+        "core/heading",
+        "core/form-input",
+        "core/form-submit-button",
+        "core/form-submission-notification",
+        "core/group",
+        "core/columns"
+      ],
+      "description": "A form.",
+      "keywords": [
+        "container",
+        "wrapper",
+        "row",
+        "section"
+      ],
+      "textdomain": "default",
+      "icon": "feedback",
+      "attributes": {
+        "submissionMethod": {
+          "type": "string",
+          "default": "email"
+        },
+        "method": {
+          "type": "string",
+          "default": "post"
+        },
+        "action": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "className": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "form-submission-notification",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "__experimental": true,
+      "name": "core/form-submission-notification",
+      "title": "Form Submission Notification",
+      "category": "common",
+      "ancestor": [
+        "core/form"
+      ],
+      "description": "Provide a notification message after the form has been submitted.",
+      "keywords": [
+        "form",
+        "feedback",
+        "notification",
+        "message"
+      ],
+      "textdomain": "default",
+      "icon": "feedback",
+      "attributes": {
+        "type": {
+          "type": "string",
+          "default": "success"
+        }
+      }
+    }
+  },
+  {
+    "name": "form-submit-button",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "__experimental": true,
+      "name": "core/form-submit-button",
+      "title": "Form Submit Button",
+      "category": "common",
+      "icon": "button",
+      "ancestor": [
+        "core/form"
+      ],
+      "allowedBlocks": [
+        "core/buttons",
+        "core/button"
+      ],
+      "description": "A submission button for forms.",
+      "keywords": [
+        "submit",
+        "button",
+        "form"
+      ],
+      "textdomain": "default",
+      "style": [
+        "wp-block-form-submit-button"
+      ]
+    }
+  },
+  {
+    "name": "gallery",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/gallery",
+      "title": "Gallery",
+      "category": "media",
+      "allowedBlocks": [
+        "core/image"
+      ],
+      "description": "Display multiple images in a rich gallery.",
+      "keywords": [
+        "images",
+        "photos"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "images": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": ".blocks-gallery-item",
+          "query": {
+            "url": {
+              "type": "string",
+              "source": "attribute",
+              "selector": "img",
+              "attribute": "src"
+            },
+            "fullUrl": {
+              "type": "string",
+              "source": "attribute",
+              "selector": "img",
+              "attribute": "data-full-url"
+            },
+            "link": {
+              "type": "string",
+              "source": "attribute",
+              "selector": "img",
+              "attribute": "data-link"
+            },
+            "alt": {
+              "type": "string",
+              "source": "attribute",
+              "selector": "img",
+              "attribute": "alt",
+              "default": ""
+            },
+            "id": {
+              "type": "string",
+              "source": "attribute",
+              "selector": "img",
+              "attribute": "data-id"
+            },
+            "caption": {
+              "type": "rich-text",
+              "source": "rich-text",
+              "selector": ".blocks-gallery-item__caption"
+            }
+          }
+        },
+        "ids": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "default": []
+        },
+        "shortCodeTransforms": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "default": []
+        },
+        "columns": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "caption": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": ".blocks-gallery-caption"
+        },
+        "imageCrop": {
+          "type": "boolean",
+          "default": true
+        },
+        "randomOrder": {
+          "type": "boolean",
+          "default": false
+        },
+        "fixedHeight": {
+          "type": "boolean",
+          "default": true
+        },
+        "linkTarget": {
+          "type": "string"
+        },
+        "linkTo": {
+          "type": "string"
+        },
+        "sizeSlug": {
+          "type": "string",
+          "default": "large"
+        },
+        "allowResize": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "providesContext": {
+        "allowResize": "allowResize",
+        "imageCrop": "imageCrop",
+        "fixedHeight": "fixedHeight"
+      },
+      "supports": {
+        "anchor": true,
+        "align": true,
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true
+          }
+        },
+        "html": false,
+        "units": [
+          "px",
+          "em",
+          "rem",
+          "vh",
+          "vw"
+        ],
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "blockGap": [
+            "horizontal",
+            "vertical"
+          ],
+          "__experimentalSkipSerialization": [
+            "blockGap"
+          ],
+          "__experimentalDefaultControls": {
+            "blockGap": true,
+            "margin": false,
+            "padding": false
+          }
+        },
+        "color": {
+          "text": false,
+          "background": true,
+          "gradients": true
+        },
+        "layout": {
+          "allowSwitching": false,
+          "allowInheriting": false,
+          "allowEditing": false,
+          "default": {
+            "type": "flex"
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-gallery-editor",
+      "style": "wp-block-gallery"
+    }
+  },
+  {
+    "name": "group",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/group",
+      "title": "Group",
+      "category": "design",
+      "description": "Gather blocks in a layout container.",
+      "keywords": [
+        "container",
+        "wrapper",
+        "row",
+        "section"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "tagName": {
+          "type": "string",
+          "default": "div"
+        },
+        "templateLock": {
+          "type": [
+            "string",
+            "boolean"
+          ],
+          "enum": [
+            "all",
+            "insert",
+            "contentOnly",
+            false
+          ]
+        },
+        "allowedBlocks": {
+          "type": "array"
+        }
+      },
+      "supports": {
+        "__experimentalOnEnter": true,
+        "__experimentalOnMerge": true,
+        "__experimentalSettings": true,
+        "align": [
+          "wide",
+          "full"
+        ],
+        "anchor": true,
+        "ariaLabel": true,
+        "html": false,
+        "background": {
+          "backgroundImage": true,
+          "backgroundSize": true,
+          "__experimentalDefaultControls": {
+            "backgroundImage": true
+          }
+        },
+        "color": {
+          "gradients": true,
+          "heading": true,
+          "button": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "shadow": true,
+        "spacing": {
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "padding": true,
+          "blockGap": true,
+          "__experimentalDefaultControls": {
+            "padding": true,
+            "blockGap": true
+          }
+        },
+        "dimensions": {
+          "minHeight": true
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "position": {
+          "sticky": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "layout": {
+          "allowSizingOnChildren": true
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-group-editor",
+      "style": "wp-block-group"
+    }
+  },
+  {
+    "name": "heading",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/heading",
+      "title": "Heading",
+      "category": "text",
+      "description": "Introduce new sections and organize content to help visitors (and search engines) understand the structure of your content.",
+      "keywords": [
+        "title",
+        "subtitle"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        },
+        "content": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "h1,h2,h3,h4,h5,h6",
+          "role": "content"
+        },
+        "level": {
+          "type": "number",
+          "default": 2
+        },
+        "levelOptions": {
+          "type": "array"
+        },
+        "placeholder": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "anchor": true,
+        "className": true,
+        "splitting": true,
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__unstablePasteTextInline": true,
+        "__experimentalSlashInserter": true,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-heading-editor",
+      "style": "wp-block-heading"
+    }
+  },
+  {
+    "name": "home-link",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/home-link",
+      "category": "design",
+      "parent": [
+        "core/navigation"
+      ],
+      "title": "Home Link",
+      "description": "Create a link that always points to the homepage of the site. Usually not necessary if there is already a site title link present in the header.",
+      "textdomain": "default",
+      "attributes": {
+        "label": {
+          "type": "string"
+        }
+      },
+      "usesContext": [
+        "textColor",
+        "customTextColor",
+        "backgroundColor",
+        "customBackgroundColor",
+        "fontSize",
+        "customFontSize",
+        "style"
+      ],
+      "supports": {
+        "reusable": false,
+        "html": false,
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-home-link-editor",
+      "style": "wp-block-home-link"
+    }
+  },
+  {
+    "name": "image",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/image",
+      "title": "Image",
+      "category": "media",
+      "usesContext": [
+        "allowResize",
+        "imageCrop",
+        "fixedHeight",
+        "postId",
+        "postType",
+        "queryId"
+      ],
+      "description": "Insert an image to make a visual statement.",
+      "keywords": [
+        "img",
+        "photo",
+        "picture"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "blob": {
+          "type": "string",
+          "role": "local"
+        },
+        "url": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "src",
+          "role": "content"
+        },
+        "alt": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "alt",
+          "default": "",
+          "role": "content"
+        },
+        "caption": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "figcaption",
+          "role": "content"
+        },
+        "lightbox": {
+          "type": "object",
+          "enabled": {
+            "type": "boolean"
+          }
+        },
+        "title": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "title",
+          "role": "content"
+        },
+        "href": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "figure > a",
+          "attribute": "href",
+          "role": "content"
+        },
+        "rel": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "figure > a",
+          "attribute": "rel"
+        },
+        "linkClass": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "figure > a",
+          "attribute": "class"
+        },
+        "id": {
+          "type": "number",
+          "role": "content"
+        },
+        "width": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string"
+        },
+        "aspectRatio": {
+          "type": "string"
+        },
+        "scale": {
+          "type": "string"
+        },
+        "sizeSlug": {
+          "type": "string"
+        },
+        "linkDestination": {
+          "type": "string"
+        },
+        "linkTarget": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "figure > a",
+          "attribute": "target"
+        }
+      },
+      "supports": {
+        "interactivity": true,
+        "align": [
+          "left",
+          "center",
+          "right",
+          "wide",
+          "full"
+        ],
+        "anchor": true,
+        "color": {
+          "text": false,
+          "background": false
+        },
+        "filter": {
+          "duotone": true
+        },
+        "spacing": {
+          "margin": true
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "width": true,
+          "__experimentalSkipSerialization": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "width": true
+          }
+        },
+        "shadow": {
+          "__experimentalSkipSerialization": true
+        }
+      },
+      "selectors": {
+        "border": ".wp-block-image img, .wp-block-image .wp-block-image__crop-area, .wp-block-image .components-placeholder",
+        "shadow": ".wp-block-image img, .wp-block-image .wp-block-image__crop-area, .wp-block-image .components-placeholder",
+        "filter": {
+          "duotone": ".wp-block-image img, .wp-block-image .components-placeholder"
+        }
+      },
+      "styles": [
+        {
+          "name": "default",
+          "label": "Default",
+          "isDefault": true
+        },
+        {
+          "name": "rounded",
+          "label": "Rounded"
+        }
+      ],
+      "editorStyle": "wp-block-image-editor",
+      "style": "wp-block-image"
+    }
+  },
+  {
+    "name": "latest-comments",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/latest-comments",
+      "title": "Latest Comments",
+      "category": "widgets",
+      "description": "Display a list of your most recent comments.",
+      "keywords": [
+        "recent comments"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "commentsToShow": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "displayAvatar": {
+          "type": "boolean",
+          "default": true
+        },
+        "displayDate": {
+          "type": "boolean",
+          "default": true
+        },
+        "displayExcerpt": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "supports": {
+        "align": true,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "html": false,
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-latest-comments-editor",
+      "style": "wp-block-latest-comments"
+    }
+  },
+  {
+    "name": "latest-posts",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/latest-posts",
+      "title": "Latest Posts",
+      "category": "widgets",
+      "description": "Display a list of your most recent posts.",
+      "keywords": [
+        "recent posts"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "selectedAuthor": {
+          "type": "number"
+        },
+        "postsToShow": {
+          "type": "number",
+          "default": 5
+        },
+        "displayPostContent": {
+          "type": "boolean",
+          "default": false
+        },
+        "displayPostContentRadio": {
+          "type": "string",
+          "default": "excerpt"
+        },
+        "excerptLength": {
+          "type": "number",
+          "default": 55
+        },
+        "displayAuthor": {
+          "type": "boolean",
+          "default": false
+        },
+        "displayPostDate": {
+          "type": "boolean",
+          "default": false
+        },
+        "postLayout": {
+          "type": "string",
+          "default": "list"
+        },
+        "columns": {
+          "type": "number",
+          "default": 3
+        },
+        "order": {
+          "type": "string",
+          "default": "desc"
+        },
+        "orderBy": {
+          "type": "string",
+          "default": "date"
+        },
+        "displayFeaturedImage": {
+          "type": "boolean",
+          "default": false
+        },
+        "featuredImageAlign": {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "featuredImageSizeSlug": {
+          "type": "string",
+          "default": "thumbnail"
+        },
+        "featuredImageSizeWidth": {
+          "type": "number",
+          "default": null
+        },
+        "featuredImageSizeHeight": {
+          "type": "number",
+          "default": null
+        },
+        "addLinkToFeaturedImage": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "supports": {
+        "align": true,
+        "html": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-latest-posts-editor",
+      "style": "wp-block-latest-posts"
+    }
+  },
+  {
+    "name": "list",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/list",
+      "title": "List",
+      "category": "text",
+      "allowedBlocks": [
+        "core/list-item"
+      ],
+      "description": "An organized collection of items displayed in a specific order.",
+      "keywords": [
+        "bullet list",
+        "ordered list",
+        "numbered list"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "ordered": {
+          "type": "boolean",
+          "default": false,
+          "role": "content"
+        },
+        "values": {
+          "type": "string",
+          "source": "html",
+          "selector": "ol,ul",
+          "multiline": "li",
+          "__unstableMultilineWrapperTags": [
+            "ol",
+            "ul"
+          ],
+          "default": "",
+          "role": "content"
+        },
+        "type": {
+          "type": "string"
+        },
+        "start": {
+          "type": "number"
+        },
+        "reversed": {
+          "type": "boolean"
+        },
+        "placeholder": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "html": false,
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "__unstablePasteTextInline": true,
+        "__experimentalOnMerge": true,
+        "__experimentalSlashInserter": true,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "selectors": {
+        "border": ".wp-block-list:not(.wp-block-list .wp-block-list)"
+      },
+      "editorStyle": "wp-block-list-editor",
+      "style": "wp-block-list"
+    }
+  },
+  {
+    "name": "list-item",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/list-item",
+      "title": "List Item",
+      "category": "text",
+      "parent": [
+        "core/list"
+      ],
+      "allowedBlocks": [
+        "core/list"
+      ],
+      "description": "An individual item within a list.",
+      "textdomain": "default",
+      "attributes": {
+        "placeholder": {
+          "type": "string"
+        },
+        "content": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "li",
+          "role": "content"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "className": false,
+        "splitting": true,
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "background": true,
+          "__experimentalDefaultControls": {
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "selectors": {
+        "root": ".wp-block-list > li",
+        "border": ".wp-block-list:not(.wp-block-list .wp-block-list) > li"
+      }
+    }
+  },
+  {
+    "name": "more",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/more",
+      "title": "More",
+      "category": "design",
+      "description": "Content before this block will be shown in the excerpt on your archives page.",
+      "keywords": [
+        "read more"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "customText": {
+          "type": "string",
+          "default": "",
+          "role": "content"
+        },
+        "noTeaser": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "supports": {
+        "customClassName": false,
+        "className": false,
+        "html": false,
+        "multiple": false,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-more-editor"
+    }
+  },
+  {
+    "name": "navigation",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/navigation",
+      "title": "Navigation",
+      "category": "theme",
+      "allowedBlocks": [
+        "core/navigation-link",
+        "core/search",
+        "core/social-links",
+        "core/page-list",
+        "core/spacer",
+        "core/home-link",
+        "core/site-title",
+        "core/site-logo",
+        "core/navigation-submenu",
+        "core/loginout",
+        "core/buttons"
+      ],
+      "description": "A collection of blocks that allow visitors to get around your site.",
+      "keywords": [
+        "menu",
+        "navigation",
+        "links"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "ref": {
+          "type": "number"
+        },
+        "textColor": {
+          "type": "string"
+        },
+        "customTextColor": {
+          "type": "string"
+        },
+        "rgbTextColor": {
+          "type": "string"
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "customBackgroundColor": {
+          "type": "string"
+        },
+        "rgbBackgroundColor": {
+          "type": "string"
+        },
+        "showSubmenuIcon": {
+          "type": "boolean",
+          "default": true
+        },
+        "openSubmenusOnClick": {
+          "type": "boolean",
+          "default": false
+        },
+        "overlayMenu": {
+          "type": "string",
+          "default": "mobile"
+        },
+        "icon": {
+          "type": "string",
+          "default": "handle"
+        },
+        "hasIcon": {
+          "type": "boolean",
+          "default": true
+        },
+        "__unstableLocation": {
+          "type": "string"
+        },
+        "overlayBackgroundColor": {
+          "type": "string"
+        },
+        "customOverlayBackgroundColor": {
+          "type": "string"
+        },
+        "overlayTextColor": {
+          "type": "string"
+        },
+        "customOverlayTextColor": {
+          "type": "string"
+        },
+        "maxNestingLevel": {
+          "type": "number",
+          "default": 5
+        },
+        "templateLock": {
+          "type": [
+            "string",
+            "boolean"
+          ],
+          "enum": [
+            "all",
+            "insert",
+            "contentOnly",
+            false
+          ]
+        }
+      },
+      "providesContext": {
+        "textColor": "textColor",
+        "customTextColor": "customTextColor",
+        "backgroundColor": "backgroundColor",
+        "customBackgroundColor": "customBackgroundColor",
+        "overlayTextColor": "overlayTextColor",
+        "customOverlayTextColor": "customOverlayTextColor",
+        "overlayBackgroundColor": "overlayBackgroundColor",
+        "customOverlayBackgroundColor": "customOverlayBackgroundColor",
+        "fontSize": "fontSize",
+        "customFontSize": "customFontSize",
+        "showSubmenuIcon": "showSubmenuIcon",
+        "openSubmenusOnClick": "openSubmenusOnClick",
+        "style": "style",
+        "maxNestingLevel": "maxNestingLevel"
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "ariaLabel": true,
+        "html": false,
+        "inserter": true,
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalTextTransform": true,
+          "__experimentalFontFamily": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalSkipSerialization": [
+            "textDecoration"
+          ],
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "spacing": {
+          "blockGap": true,
+          "units": [
+            "px",
+            "em",
+            "rem",
+            "vh",
+            "vw"
+          ],
+          "__experimentalDefaultControls": {
+            "blockGap": true
+          }
+        },
+        "layout": {
+          "allowSwitching": false,
+          "allowInheriting": false,
+          "allowVerticalAlignment": false,
+          "allowSizingOnChildren": true,
+          "default": {
+            "type": "flex"
+          }
+        },
+        "interactivity": true,
+        "renaming": false
+      },
+      "editorStyle": "wp-block-navigation-editor",
+      "style": "wp-block-navigation"
+    }
+  },
+  {
+    "name": "page-list",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/page-list",
+      "title": "Page List",
+      "category": "widgets",
+      "allowedBlocks": [
+        "core/page-list-item"
+      ],
+      "description": "Display a list of all pages.",
+      "keywords": [
+        "menu",
+        "navigation"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "parentPageID": {
+          "type": "integer",
+          "default": 0
+        },
+        "isNested": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "usesContext": [
+        "textColor",
+        "customTextColor",
+        "backgroundColor",
+        "customBackgroundColor",
+        "overlayTextColor",
+        "customOverlayTextColor",
+        "overlayBackgroundColor",
+        "customOverlayBackgroundColor",
+        "fontSize",
+        "customFontSize",
+        "showSubmenuIcon",
+        "style",
+        "openSubmenusOnClick"
+      ],
+      "supports": {
+        "reusable": false,
+        "html": false,
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "color": {
+          "text": true,
+          "background": true,
+          "link": true,
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        },
+        "spacing": {
+          "padding": true,
+          "margin": true,
+          "__experimentalDefaultControls": {
+            "padding": false,
+            "margin": false
+          }
+        }
+      },
+      "editorStyle": "wp-block-page-list-editor",
+      "style": "wp-block-page-list"
+    }
+  },
+  {
+    "name": "page-list-item",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/page-list-item",
+      "title": "Page List Item",
+      "category": "widgets",
+      "parent": [
+        "core/page-list"
+      ],
+      "description": "Displays a page inside a list of all pages.",
+      "keywords": [
+        "page",
+        "menu",
+        "navigation"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "id": {
+          "type": "number"
+        },
+        "label": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "hasChildren": {
+          "type": "boolean"
+        }
+      },
+      "usesContext": [
+        "textColor",
+        "customTextColor",
+        "backgroundColor",
+        "customBackgroundColor",
+        "overlayTextColor",
+        "customOverlayTextColor",
+        "overlayBackgroundColor",
+        "customOverlayBackgroundColor",
+        "fontSize",
+        "customFontSize",
+        "showSubmenuIcon",
+        "style",
+        "openSubmenusOnClick"
+      ],
+      "supports": {
+        "reusable": false,
+        "html": false,
+        "lock": false,
+        "inserter": false,
+        "__experimentalToolbar": false,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-page-list-editor",
+      "style": "wp-block-page-list"
+    }
+  },
+  {
+    "name": "paragraph",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/paragraph",
+      "title": "Paragraph",
+      "category": "text",
+      "description": "Start with the basic building block of all narrative.",
+      "keywords": [
+        "text"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "align": {
+          "type": "string"
+        },
+        "content": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "p",
+          "role": "content"
+        },
+        "dropCap": {
+          "type": "boolean",
+          "default": false
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "ltr",
+            "rtl"
+          ]
+        }
+      },
+      "supports": {
+        "splitting": true,
+        "anchor": true,
+        "className": false,
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalSelector": "p",
+        "__unstablePasteTextInline": true,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-paragraph-editor",
+      "style": "wp-block-paragraph"
+    }
+  },
+  {
+    "name": "post-navigation-link",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/post-navigation-link",
+      "title": "Post Navigation Link",
+      "category": "theme",
+      "description": "Displays the next or previous post link that is adjacent to the current post.",
+      "textdomain": "default",
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "default": "next"
+        },
+        "label": {
+          "type": "string",
+          "role": "content"
+        },
+        "showTitle": {
+          "type": "boolean",
+          "default": false
+        },
+        "linkLabel": {
+          "type": "boolean",
+          "default": false
+        },
+        "arrow": {
+          "type": "string",
+          "default": "none"
+        },
+        "taxonomy": {
+          "type": "string",
+          "default": ""
+        }
+      },
+      "usesContext": [
+        "postType"
+      ],
+      "supports": {
+        "reusable": false,
+        "html": false,
+        "color": {
+          "link": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-post-navigation-link"
+    }
+  },
+  {
+    "name": "post-template",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/post-template",
+      "title": "Post Template",
+      "category": "theme",
+      "ancestor": [
+        "core/query"
+      ],
+      "description": "Contains the block elements used to render a post, like the title, date, featured image, content or excerpt, and more.",
+      "textdomain": "default",
+      "usesContext": [
+        "queryId",
+        "query",
+        "displayLayout",
+        "templateSlug",
+        "previewPostType",
+        "enhancedPagination",
+        "postType"
+      ],
+      "supports": {
+        "reusable": false,
+        "html": false,
+        "align": [
+          "wide",
+          "full"
+        ],
+        "layout": true,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "blockGap": {
+            "__experimentalDefault": "1.25em"
+          },
+          "__experimentalDefaultControls": {
+            "blockGap": true,
+            "padding": false,
+            "margin": false
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        }
+      },
+      "style": "wp-block-post-template",
+      "editorStyle": "wp-block-post-template-editor"
+    }
+  },
+  {
+    "name": "post-terms",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/post-terms",
+      "title": "Post Terms",
+      "category": "theme",
+      "description": "Post terms.",
+      "textdomain": "default",
+      "attributes": {
+        "term": {
+          "type": "string"
+        },
+        "textAlign": {
+          "type": "string"
+        },
+        "separator": {
+          "type": "string",
+          "default": ", "
+        },
+        "prefix": {
+          "type": "string",
+          "default": "",
+          "role": "content"
+        },
+        "suffix": {
+          "type": "string",
+          "default": "",
+          "role": "content"
+        }
+      },
+      "usesContext": [
+        "postId",
+        "postType"
+      ],
+      "example": {
+        "viewportWidth": 350
+      },
+      "supports": {
+        "html": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-post-terms"
+    }
+  },
+  {
+    "name": "preformatted",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/preformatted",
+      "title": "Preformatted",
+      "category": "text",
+      "description": "Add text that respects your spacing and tabs, and also allows styling.",
+      "textdomain": "default",
+      "attributes": {
+        "content": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "pre",
+          "__unstablePreserveWhiteSpace": true,
+          "role": "content"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "color": {
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "padding": true,
+          "margin": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-preformatted"
+    }
+  },
+  {
+    "name": "pullquote",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/pullquote",
+      "title": "Pullquote",
+      "category": "text",
+      "description": "Give special visual emphasis to a quote from your text.",
+      "textdomain": "default",
+      "attributes": {
+        "value": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "p",
+          "role": "content"
+        },
+        "citation": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "cite",
+          "role": "content"
+        },
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": [
+          "left",
+          "right",
+          "wide",
+          "full"
+        ],
+        "background": {
+          "backgroundImage": true,
+          "backgroundSize": true,
+          "__experimentalDefaultControls": {
+            "backgroundImage": true
+          }
+        },
+        "color": {
+          "gradients": true,
+          "background": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "dimensions": {
+          "minHeight": true,
+          "__experimentalDefaultControls": {
+            "minHeight": false
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "__experimentalStyle": {
+          "typography": {
+            "fontSize": "1.5em",
+            "lineHeight": "1.6"
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-pullquote-editor",
+      "style": "wp-block-pullquote"
+    }
+  },
+  {
+    "name": "query-title",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/query-title",
+      "title": "Query Title",
+      "category": "theme",
+      "description": "Display the query title.",
+      "textdomain": "default",
+      "attributes": {
+        "type": {
+          "type": "string"
+        },
+        "textAlign": {
+          "type": "string"
+        },
+        "level": {
+          "type": "number",
+          "default": 1
+        },
+        "levelOptions": {
+          "type": "array"
+        },
+        "showPrefix": {
+          "type": "boolean",
+          "default": true
+        },
+        "showSearchTerm": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "example": {
+        "attributes": {
+          "type": "search"
+        }
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "color": {
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-query-title"
+    }
+  },
+  {
+    "name": "query-total",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/query-total",
+      "title": "Query Total",
+      "category": "theme",
+      "ancestor": [
+        "core/query"
+      ],
+      "description": "Display the total number of results in a query.",
+      "textdomain": "default",
+      "attributes": {
+        "displayType": {
+          "type": "string",
+          "default": "total-results"
+        }
+      },
+      "usesContext": [
+        "queryId",
+        "query"
+      ],
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "color": {
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-query-total"
+    }
+  },
+  {
+    "name": "quote",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/quote",
+      "title": "Quote",
+      "category": "text",
+      "description": "Give quoted text visual emphasis. \"In quoting others, we cite ourselves.\" \u2014 Julio Cort\u00e1zar",
+      "keywords": [
+        "blockquote",
+        "cite"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "value": {
+          "type": "string",
+          "source": "html",
+          "selector": "blockquote",
+          "multiline": "p",
+          "default": "",
+          "role": "content"
+        },
+        "citation": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "cite",
+          "role": "content"
+        },
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": [
+          "left",
+          "right",
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "background": {
+          "backgroundImage": true,
+          "backgroundSize": true,
+          "__experimentalDefaultControls": {
+            "backgroundImage": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "dimensions": {
+          "minHeight": true,
+          "__experimentalDefaultControls": {
+            "minHeight": false
+          }
+        },
+        "__experimentalOnEnter": true,
+        "__experimentalOnMerge": true,
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "color": {
+          "gradients": true,
+          "heading": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "layout": {
+          "allowEditing": false
+        },
+        "spacing": {
+          "blockGap": true,
+          "padding": true,
+          "margin": true
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "styles": [
+        {
+          "name": "default",
+          "label": "Default",
+          "isDefault": true
+        },
+        {
+          "name": "plain",
+          "label": "Plain"
+        }
+      ],
+      "editorStyle": "wp-block-quote-editor",
+      "style": "wp-block-quote"
+    }
+  },
+  {
+    "name": "read-more",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/read-more",
+      "title": "Read More",
+      "category": "theme",
+      "description": "Displays the link of a post, page, or any other content-type.",
+      "textdomain": "default",
+      "attributes": {
+        "content": {
+          "type": "string",
+          "role": "content"
+        },
+        "linkTarget": {
+          "type": "string",
+          "default": "_self"
+        }
+      },
+      "usesContext": [
+        "postId"
+      ],
+      "supports": {
+        "html": false,
+        "color": {
+          "gradients": true,
+          "text": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true,
+            "textDecoration": true
+          }
+        },
+        "spacing": {
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "padding": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "width": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-read-more"
+    }
+  },
+  {
+    "name": "rss",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/rss",
+      "title": "RSS",
+      "category": "widgets",
+      "description": "Display entries from any RSS or Atom feed.",
+      "keywords": [
+        "atom",
+        "feed"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "columns": {
+          "type": "number",
+          "default": 2
+        },
+        "blockLayout": {
+          "type": "string",
+          "default": "list"
+        },
+        "feedURL": {
+          "type": "string",
+          "default": "",
+          "role": "content"
+        },
+        "itemsToShow": {
+          "type": "number",
+          "default": 5
+        },
+        "displayExcerpt": {
+          "type": "boolean",
+          "default": false
+        },
+        "displayAuthor": {
+          "type": "boolean",
+          "default": false
+        },
+        "displayDate": {
+          "type": "boolean",
+          "default": false
+        },
+        "excerptLength": {
+          "type": "number",
+          "default": 55
+        },
+        "openInNewTab": {
+          "type": "boolean",
+          "default": false
+        },
+        "rel": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "align": true,
+        "html": false,
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "padding": false,
+            "margin": false
+          }
+        },
+        "color": {
+          "background": true,
+          "text": true,
+          "gradients": true,
+          "link": true
+        }
+      },
+      "editorStyle": "wp-block-rss-editor",
+      "style": "wp-block-rss"
+    }
+  },
+  {
+    "name": "search",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/search",
+      "title": "Search",
+      "category": "widgets",
+      "description": "Help visitors find your content.",
+      "keywords": [
+        "find"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "label": {
+          "type": "string",
+          "role": "content"
+        },
+        "showLabel": {
+          "type": "boolean",
+          "default": true
+        },
+        "placeholder": {
+          "type": "string",
+          "default": "",
+          "role": "content"
+        },
+        "width": {
+          "type": "number"
+        },
+        "widthUnit": {
+          "type": "string"
+        },
+        "buttonText": {
+          "type": "string",
+          "role": "content"
+        },
+        "buttonPosition": {
+          "type": "string",
+          "default": "button-outside"
+        },
+        "buttonUseIcon": {
+          "type": "boolean",
+          "default": false
+        },
+        "query": {
+          "type": "object",
+          "default": {}
+        },
+        "isSearchFieldHidden": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "supports": {
+        "align": [
+          "left",
+          "center",
+          "right"
+        ],
+        "color": {
+          "gradients": true,
+          "__experimentalSkipSerialization": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "interactivity": true,
+        "typography": {
+          "__experimentalSkipSerialization": true,
+          "__experimentalSelector": ".wp-block-search__label, .wp-block-search__input, .wp-block-search__button",
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "color": true,
+          "radius": true,
+          "width": true,
+          "__experimentalSkipSerialization": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "radius": true,
+            "width": true
+          }
+        },
+        "spacing": {
+          "margin": true
+        },
+        "html": false
+      },
+      "editorStyle": "wp-block-search-editor",
+      "style": "wp-block-search"
+    }
+  },
+  {
+    "name": "separator",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/separator",
+      "title": "Separator",
+      "category": "design",
+      "description": "Create a break between ideas or sections with a horizontal separator.",
+      "keywords": [
+        "horizontal-line",
+        "hr",
+        "divider"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "opacity": {
+          "type": "string",
+          "default": "alpha-channel"
+        },
+        "tagName": {
+          "type": "string",
+          "enum": [
+            "hr",
+            "div"
+          ],
+          "default": "hr"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": [
+          "center",
+          "wide",
+          "full"
+        ],
+        "color": {
+          "enableContrastChecker": false,
+          "__experimentalSkipSerialization": true,
+          "gradients": true,
+          "background": true,
+          "text": false,
+          "__experimentalDefaultControls": {
+            "background": true
+          }
+        },
+        "spacing": {
+          "margin": [
+            "top",
+            "bottom"
+          ]
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "styles": [
+        {
+          "name": "default",
+          "label": "Default",
+          "isDefault": true
+        },
+        {
+          "name": "wide",
+          "label": "Wide Line"
+        },
+        {
+          "name": "dots",
+          "label": "Dots"
+        }
+      ],
+      "editorStyle": "wp-block-separator-editor",
+      "style": "wp-block-separator"
+    }
+  },
+  {
+    "name": "shortcode",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/shortcode",
+      "title": "Shortcode",
+      "category": "widgets",
+      "description": "Insert additional custom elements with a WordPress shortcode.",
+      "textdomain": "default",
+      "attributes": {
+        "text": {
+          "type": "string",
+          "source": "raw",
+          "role": "content"
+        }
+      },
+      "supports": {
+        "className": false,
+        "customClassName": false,
+        "html": false
+      },
+      "editorStyle": "wp-block-shortcode-editor"
+    }
+  },
+  {
+    "name": "site-logo",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/site-logo",
+      "title": "Site Logo",
+      "category": "theme",
+      "description": "Display an image to represent this site. Update this block and the changes apply everywhere.",
+      "textdomain": "default",
+      "attributes": {
+        "width": {
+          "type": "number"
+        },
+        "isLink": {
+          "type": "boolean",
+          "default": true,
+          "role": "content"
+        },
+        "linkTarget": {
+          "type": "string",
+          "default": "_self",
+          "role": "content"
+        },
+        "shouldSyncIcon": {
+          "type": "boolean"
+        }
+      },
+      "example": {
+        "viewportWidth": 500,
+        "attributes": {
+          "width": 350,
+          "className": "block-editor-block-types-list__site-logo-example"
+        }
+      },
+      "supports": {
+        "html": false,
+        "align": true,
+        "alignWide": false,
+        "color": {
+          "text": false,
+          "background": false
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "filter": {
+          "duotone": true
+        }
+      },
+      "styles": [
+        {
+          "name": "default",
+          "label": "Default",
+          "isDefault": true
+        },
+        {
+          "name": "rounded",
+          "label": "Rounded"
+        }
+      ],
+      "selectors": {
+        "filter": {
+          "duotone": ".wp-block-site-logo img, .wp-block-site-logo .components-placeholder__illustration, .wp-block-site-logo .components-placeholder::before"
+        }
+      },
+      "editorStyle": "wp-block-site-logo-editor",
+      "style": "wp-block-site-logo"
+    }
+  },
+  {
+    "name": "site-tagline",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/site-tagline",
+      "title": "Site Tagline",
+      "category": "theme",
+      "description": "Describe in a few words what the site is about. The tagline can be used in search results or when sharing on social networks even if it\u2019s not displayed in the theme design.",
+      "keywords": [
+        "description"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        },
+        "level": {
+          "type": "number",
+          "default": 0
+        },
+        "levelOptions": {
+          "type": "array",
+          "default": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      },
+      "example": {
+        "viewportWidth": 350,
+        "attributes": {
+          "textAlign": "center"
+        }
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "color": {
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        }
+      },
+      "editorStyle": "wp-block-site-tagline-editor",
+      "style": "wp-block-site-tagline"
+    }
+  },
+  {
+    "name": "site-title",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/site-title",
+      "title": "Site Title",
+      "category": "theme",
+      "description": "Displays the name of this site. Update the block, and the changes apply everywhere it\u2019s used. This will also appear in the browser title bar and in search results.",
+      "textdomain": "default",
+      "attributes": {
+        "level": {
+          "type": "number",
+          "default": 1
+        },
+        "levelOptions": {
+          "type": "array",
+          "default": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "textAlign": {
+          "type": "string"
+        },
+        "isLink": {
+          "type": "boolean",
+          "default": true,
+          "role": "content"
+        },
+        "linkTarget": {
+          "type": "string",
+          "default": "_self",
+          "role": "content"
+        }
+      },
+      "example": {
+        "viewportWidth": 500
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true,
+            "link": true
+          }
+        },
+        "spacing": {
+          "padding": true,
+          "margin": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true
+        }
+      },
+      "editorStyle": "wp-block-site-title-editor",
+      "style": "wp-block-site-title"
+    }
+  },
+  {
+    "name": "spacer",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/spacer",
+      "title": "Spacer",
+      "category": "design",
+      "description": "Add white space between blocks and customize its height.",
+      "textdomain": "default",
+      "attributes": {
+        "height": {
+          "type": "string",
+          "default": "100px"
+        },
+        "width": {
+          "type": "string"
+        }
+      },
+      "usesContext": [
+        "orientation"
+      ],
+      "supports": {
+        "anchor": true,
+        "spacing": {
+          "margin": [
+            "top",
+            "bottom"
+          ],
+          "__experimentalDefaultControls": {
+            "margin": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-spacer-editor",
+      "style": "wp-block-spacer"
+    }
+  },
+  {
+    "name": "table",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/table",
+      "title": "Table",
+      "category": "text",
+      "description": "Create structured content in rows and columns to display information.",
+      "textdomain": "default",
+      "attributes": {
+        "hasFixedLayout": {
+          "type": "boolean",
+          "default": true
+        },
+        "caption": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "figcaption",
+          "role": "content"
+        },
+        "head": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": "thead tr",
+          "query": {
+            "cells": {
+              "type": "array",
+              "default": [],
+              "source": "query",
+              "selector": "td,th",
+              "query": {
+                "content": {
+                  "type": "rich-text",
+                  "source": "rich-text",
+                  "role": "content"
+                },
+                "tag": {
+                  "type": "string",
+                  "default": "td",
+                  "source": "tag"
+                },
+                "scope": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "scope"
+                },
+                "align": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "data-align"
+                },
+                "colspan": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "colspan"
+                },
+                "rowspan": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "rowspan"
+                }
+              }
+            }
+          }
+        },
+        "body": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": "tbody tr",
+          "query": {
+            "cells": {
+              "type": "array",
+              "default": [],
+              "source": "query",
+              "selector": "td,th",
+              "query": {
+                "content": {
+                  "type": "rich-text",
+                  "source": "rich-text",
+                  "role": "content"
+                },
+                "tag": {
+                  "type": "string",
+                  "default": "td",
+                  "source": "tag"
+                },
+                "scope": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "scope"
+                },
+                "align": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "data-align"
+                },
+                "colspan": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "colspan"
+                },
+                "rowspan": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "rowspan"
+                }
+              }
+            }
+          }
+        },
+        "foot": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": "tfoot tr",
+          "query": {
+            "cells": {
+              "type": "array",
+              "default": [],
+              "source": "query",
+              "selector": "td,th",
+              "query": {
+                "content": {
+                  "type": "rich-text",
+                  "source": "rich-text",
+                  "role": "content"
+                },
+                "tag": {
+                  "type": "string",
+                  "default": "td",
+                  "source": "tag"
+                },
+                "scope": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "scope"
+                },
+                "align": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "data-align"
+                },
+                "colspan": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "colspan"
+                },
+                "rowspan": {
+                  "type": "string",
+                  "source": "attribute",
+                  "attribute": "rowspan"
+                }
+              }
+            }
+          }
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": true,
+        "color": {
+          "__experimentalSkipSerialization": true,
+          "gradients": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "__experimentalBorder": {
+          "__experimentalSkipSerialization": true,
+          "color": true,
+          "style": true,
+          "width": true,
+          "__experimentalDefaultControls": {
+            "color": true,
+            "style": true,
+            "width": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "selectors": {
+        "root": ".wp-block-table > table",
+        "spacing": ".wp-block-table"
+      },
+      "styles": [
+        {
+          "name": "regular",
+          "label": "Default",
+          "isDefault": true
+        },
+        {
+          "name": "stripes",
+          "label": "Stripes"
+        }
+      ],
+      "editorStyle": "wp-block-table-editor",
+      "style": "wp-block-table"
+    }
+  },
+  {
+    "name": "table-of-contents",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "__experimental": true,
+      "name": "core/table-of-contents",
+      "title": "Table of Contents",
+      "category": "design",
+      "description": "Summarize your post with a list of headings. Add HTML anchors to Heading blocks to link them here.",
+      "keywords": [
+        "document outline",
+        "summary"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "headings": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "default": []
+        },
+        "onlyIncludeCurrentPage": {
+          "type": "boolean",
+          "default": false
+        },
+        "maxLevel": {
+          "type": "number"
+        }
+      },
+      "supports": {
+        "html": false,
+        "color": {
+          "text": true,
+          "background": true,
+          "gradients": true,
+          "link": true
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "style": "wp-block-table-of-contents"
+    }
+  },
+  {
+    "name": "tag-cloud",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/tag-cloud",
+      "title": "Tag Cloud",
+      "category": "widgets",
+      "description": "A cloud of popular keywords, each sized by how often it appears.",
+      "textdomain": "default",
+      "attributes": {
+        "numberOfTags": {
+          "type": "number",
+          "default": 45,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "taxonomy": {
+          "type": "string",
+          "default": "post_tag"
+        },
+        "showTagCounts": {
+          "type": "boolean",
+          "default": false
+        },
+        "smallestFontSize": {
+          "type": "string",
+          "default": "8pt"
+        },
+        "largestFontSize": {
+          "type": "string",
+          "default": "22pt"
+        }
+      },
+      "styles": [
+        {
+          "name": "default",
+          "label": "Default",
+          "isDefault": true
+        },
+        {
+          "name": "outline",
+          "label": "Outline"
+        }
+      ],
+      "supports": {
+        "html": false,
+        "align": true,
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "typography": {
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalLetterSpacing": true
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      },
+      "editorStyle": "wp-block-tag-cloud-editor"
+    }
+  },
+  {
+    "name": "template-part",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/template-part",
+      "title": "Template Part",
+      "category": "theme",
+      "description": "Edit the different global regions of your site, like the header, footer, sidebar, or create your own.",
+      "textdomain": "default",
+      "attributes": {
+        "slug": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        },
+        "tagName": {
+          "type": "string"
+        },
+        "area": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "align": true,
+        "html": false,
+        "reusable": false,
+        "renaming": false,
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-template-part-editor"
+    }
+  },
+  {
+    "name": "term-description",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/term-description",
+      "title": "Term Description",
+      "category": "theme",
+      "description": "Display the description of categories, tags and custom taxonomies when viewing an archive.",
+      "textdomain": "default",
+      "attributes": {
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "align": [
+          "wide",
+          "full"
+        ],
+        "html": false,
+        "color": {
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "spacing": {
+          "padding": true,
+          "margin": true
+        },
+        "typography": {
+          "fontSize": true,
+          "lineHeight": true,
+          "__experimentalFontFamily": true,
+          "__experimentalFontWeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "color": true,
+          "width": true,
+          "style": true,
+          "__experimentalDefaultControls": {
+            "radius": true,
+            "color": true,
+            "width": true,
+            "style": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "verse",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/verse",
+      "title": "Verse",
+      "category": "text",
+      "description": "Insert poetry. Use special spacing formats. Or quote song lyrics.",
+      "keywords": [
+        "poetry",
+        "poem"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "content": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "pre",
+          "__unstablePreserveWhiteSpace": true,
+          "role": "content"
+        },
+        "textAlign": {
+          "type": "string"
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "background": {
+          "backgroundImage": true,
+          "backgroundSize": true,
+          "__experimentalDefaultControls": {
+            "backgroundImage": true
+          }
+        },
+        "color": {
+          "gradients": true,
+          "link": true,
+          "__experimentalDefaultControls": {
+            "background": true,
+            "text": true
+          }
+        },
+        "dimensions": {
+          "minHeight": true,
+          "__experimentalDefaultControls": {
+            "minHeight": false
+          }
+        },
+        "typography": {
+          "fontSize": true,
+          "__experimentalFontFamily": true,
+          "lineHeight": true,
+          "__experimentalFontStyle": true,
+          "__experimentalFontWeight": true,
+          "__experimentalLetterSpacing": true,
+          "__experimentalTextTransform": true,
+          "__experimentalTextDecoration": true,
+          "__experimentalWritingMode": true,
+          "__experimentalDefaultControls": {
+            "fontSize": true
+          }
+        },
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "__experimentalBorder": {
+          "radius": true,
+          "width": true,
+          "color": true,
+          "style": true
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "style": "wp-block-verse",
+      "editorStyle": "wp-block-verse-editor"
+    }
+  },
+  {
+    "name": "video",
+    "data": {
+      "$schema": "https://schemas.wp.org/trunk/block.json",
+      "apiVersion": 3,
+      "name": "core/video",
+      "title": "Video",
+      "category": "media",
+      "description": "Embed a video from your media library or upload a new one.",
+      "keywords": [
+        "movie"
+      ],
+      "textdomain": "default",
+      "attributes": {
+        "autoplay": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "autoplay"
+        },
+        "caption": {
+          "type": "rich-text",
+          "source": "rich-text",
+          "selector": "figcaption",
+          "role": "content"
+        },
+        "controls": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "controls",
+          "default": true
+        },
+        "id": {
+          "type": "number",
+          "role": "content"
+        },
+        "loop": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "loop"
+        },
+        "muted": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "muted"
+        },
+        "poster": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "poster"
+        },
+        "preload": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "preload",
+          "default": "metadata"
+        },
+        "blob": {
+          "type": "string",
+          "role": "local"
+        },
+        "src": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "src",
+          "role": "content"
+        },
+        "playsInline": {
+          "type": "boolean",
+          "source": "attribute",
+          "selector": "video",
+          "attribute": "playsinline"
+        },
+        "tracks": {
+          "role": "content",
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "default": []
+        }
+      },
+      "supports": {
+        "anchor": true,
+        "align": true,
+        "spacing": {
+          "margin": true,
+          "padding": true,
+          "__experimentalDefaultControls": {
+            "margin": false,
+            "padding": false
+          }
+        },
+        "interactivity": {
+          "clientNavigation": true
+        }
+      },
+      "editorStyle": "wp-block-video-editor",
+      "style": "wp-block-video"
+    }
+  }
+]
