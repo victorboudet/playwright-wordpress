@@ -9,6 +9,28 @@ On wordpress there are blocks, for example all the core blocks, here for example
 <!-- /wp:paragraph -->
 ```
 
+Also here an example of a full pattern
+```html
+<!-- wp:cover {"url":"https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYyMjIwMzM1LXdpa2ltZWRpYS1pbWFnZS1rb3dyeWtjbi5qcGc.jpg","id":null,"dimRatio":70,"overlayColor":"charcoal-0","isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","align":"center","style":{"color":{"duotone":"var:preset|duotone|blue-orange"}},"layout":{"type":"constrained","contentSize":"100vw","wideSize":"100vw"}} -->
+<div class="wp-block-cover aligncenter" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-charcoal-0-background-color has-background-dim-70 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYyMjIwMzM1LXdpa2ltZWRpYS1pbWFnZS1rb3dyeWtjbi5qcGc.jpg" data-object-fit="cover" /><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull"><!-- wp:heading {"textAlign":"center","style":{"border":{"radius":"10px"}},"fontSize":"extra-large"} -->
+<h2 class="wp-block-heading has-text-align-center has-extra-large-font-size" style="border-radius:10px">OOPS PAGE NOT FOUND</h2>
+<!-- /wp:heading -->
+
+<!-- wp:buttons {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|50"},"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"space-between","orientation":"horizontal","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-buttons" style="padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:button {"width":100,"className":"is-style-outline","style":{"border":{"width":"1px","radius":"11px"},"spacing":{"padding":{"left":"0","right":"0"}}},"fontSize":"large"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-outline has-large-font-size"><a class="wp-block-button__link wp-element-button" style="border-width:1px;border-radius:11px;padding-right:0;padding-left:0">Back to Home </a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+```
+
+and here the prompt that supposily generate it
+```txt
+Create a WordPress cover block with a background image, overlay color, and dimming effect, containing a centered heading with rounded borders displaying "OOPS PAGE NOT FOUND," followed by a full-width button styled as an outline with large font size labeled "Back to Home," arranged horizontally with spacing and padding, ensuring the layout is responsive and visually appealing for a call to action button section.
+```
+
 With a theses blocks, we can build full functionnal pages, theses assembly of blocks are named "patterns".
 Patterns are a way to organize and reuse blocks in a consistent way.
 I got 1200 patterns that each are made of differents blocks.
@@ -19,21 +41,139 @@ Here is the context of the project, tell me all the additional context you need 
 I have no idea where to begin
 So how can i create an AI that can generate wordpress pages, with theses wordpress blocks, i can provide the full core/block references, and all the pattern to maybe train the AI
 
+I got for each block a Json shema, here the example of the schema for the column
+```json
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "core/columns",
+  "title": "Columns",
+  "category": "design",
+  "allowedBlocks": [
+    "core/column"
+  ],
+  "description": "Display content in multiple columns, with blocks added to each column.",
+  "textdomain": "default",
+  "attributes": {
+    "verticalAlignment": {
+      "type": "string"
+    },
+    "isStackedOnMobile": {
+      "type": "boolean",
+      "default": true
+    },
+    "templateLock": {
+      "type": [
+        "string",
+        "boolean"
+      ],
+      "enum": [
+        "all",
+        "insert",
+        "contentOnly",
+        false
+      ]
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "color": {
+      "gradients": true,
+      "link": true,
+      "heading": true,
+      "button": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "spacing": {
+      "blockGap": {
+        "__experimentalDefault": "2em",
+        "sides": [
+          "horizontal",
+          "vertical"
+        ]
+      },
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowInheriting": false,
+      "allowEditing": false,
+      "default": {
+        "type": "flex",
+        "flexWrap": "nowrap"
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "interactivity": {
+      "clientNavigation": true
+    },
+    "shadow": true
+  },
+  "editorStyle": "wp-block-columns-editor",
+  "style": "wp-block-columns"
+}
+```
+it is usefull for the project ? And can i use them for the project ?
+
 # me
 I got some background with CPP, C, Python, Rust and JavaScript.
 I am mostly working on a vps on the cloud
 I can get some budget for this project, but probably no more than 100$
 
-# Patterns Info
-I have 1200 patterns
-Each pattern got a name and a list of 1 to 12 tags
-I can get a rendered version of each pattern
-The patterns are stored in a database
-I got all type of patterns from commercial to blog and portfolio
+# Info
+- I have 1200 patterns
+- Each pattern got a name and a list of 1 to 12 tags
+- I can get a rendered version of each pattern
+- The patterns are stored in a database
+- I got all type of patterns from commercial to blog and portfolio
+- Blocks are not the same as patterns, patterns are composed of blocks
+- For each pattern i got a prompt, that is the supposed prompt that generated the pattern
 
 # AI
 The AI must generate full pages
 it must ensure that blocks are compatible with each other
 it must ensure that the generated pages are valid and functional
-it must ensure that the generated pages are optimized for SEO
 it would be given a theme
+
+I personally want to do it in python, with openai sdk or API for example
+So explain me how to do this, how it will works, etc
