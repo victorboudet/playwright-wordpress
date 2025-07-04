@@ -30,7 +30,6 @@ and here the prompt that supposily generate it
 ```txt
 Create a WordPress cover block with a background image, overlay color, and dimming effect, containing a centered heading with rounded borders displaying "OOPS PAGE NOT FOUND," followed by a full-width button styled as an outline with large font size labeled "Back to Home," arranged horizontally with spacing and padding, ensuring the layout is responsive and visually appealing for a call to action button section.
 ```
-
 With a theses blocks, we can build full functionnal pages, theses assembly of blocks are named "patterns".
 Patterns are a way to organize and reuse blocks in a consistent way.
 I got 1200 patterns that each are made of differents blocks.
@@ -176,4 +175,4 @@ it must ensure that the generated pages are valid and functional
 it would be given a theme
 
 I personally want to do it in python, with openai sdk or API for example
-So explain me how to do this, how it will works, etc
+So explain me how to do this, how it will works, if i should fine tune ? Put a db vectors at disposition ? Prompt engeenering ? All that ?
